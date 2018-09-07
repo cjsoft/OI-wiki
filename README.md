@@ -2,7 +2,7 @@
 
 
 [![Travis](https://img.shields.io/travis/24OI/OI-wiki.svg?style=flat-square)](https://travis-ci.org/24OI/OI-wiki)
-[![Progress](https://img.shields.io/badge/Progress-36%25-brightgreen.svg?style=flat-square)](https://github.com/24OI/OI-wiki)
+[![Progress](https://img.shields.io/badge/Progress-49%25-brightgreen.svg?style=flat-square)](https://github.com/24OI/OI-wiki)
 [![Telegram](https://img.shields.io/badge/OI--wiki-join%20Telegram%20chat-brightgreen.svg?style=flat-square)](https://t.me/OIwiki)
 [![QQ](https://img.shields.io/badge/OI--wiki-join%20QQ%20group-brightgreen.svg?style=flat-square)](https://jq.qq.com/?_wv=1027&k=5EfkM6K)
 
@@ -24,6 +24,8 @@
 
 目前，**OI Wiki** 正在完善各大方向的基础知识，以便于初学者更好地学习。
 
+关于上述部分待完善内容，请参见 **OI Wiki** 中的 [Projects](https://github.com/24OI/OI-wiki/projects)，详细列举了正在做的事情以及待做事项。
+
 当然，**OI Wiki** 基于 **OI**，却不会局限于 **OI**。**OI Wiki** 会努力完善以下内容：
 
 - 应用在 ACM-ICPC 竞赛中的进阶知识
@@ -40,36 +42,45 @@
 
 当然也可以本地部署。（**需要 Python 3**）
 
-**如果遇到问题，可以查阅 [F.A.Q.](.github/CONTRIBUTING.md#faq) 来了解更多信息。**
+**如果遇到问题，可以查阅 [F.A.Q.](https://oi-wiki.org/intro/faq/) 来了解更多信息。**
 
 ```bash
 git clone https://github.com/24OI/OI-wiki.git
 cd OI-wiki
 pip install -U -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
+<<<<<<< HEAD
 # 最简单的构建方法，会在 site 文件夹下得到静态页面
 mkdocs build
 # 我们对主题进行了修改，如果想要得到和 https://oi-wiki.org 相似的效果，还需要运行下面这行
 chmod +x ./build.sh && sed -i "s/mkdocs serve/mkdocs build/g" build.sh && ./build.sh
+=======
+# 使用我们的自定义主题（不是必须执行）
+chmod +x ./build.sh && ./build.sh
+
+# 最简单的构建方法，会在 site 文件夹下得到静态页面
+mkdocs build -v
+>>>>>>> raw/master
 
 # 运行一个服务器，访问 http://127.0.0.1:8000 可以查看效果
-mkdocs serve
-# 我们对主题进行了修改，如果想要得到和 https://oi-wiki.org 相似的效果，还需要运行下面这行
-chmod +x ./build.sh && sed -i "s/mkdocs build/mkdocs serve/g" build.sh && ./build.sh
+mkdocs serve -v
 
-# 注：大部分时候不需要测试我们修改后的主题
 ```
+
+我们现在在服务器端渲染 mathjax ，如果希望实现类似效果，可以参考 [netlify_build.sh](https://github.com/24OI/OI-wiki/blob/master/netlify_build.sh)。（需要安装 Node.js）
 
 ----
 
 ## 如何参与完善 OI Wiki
 
 我们非常欢迎你为 **OI Wiki** 编写内容，将自己的所学所得与大家分享。
-具体的贡献方式在 [CONTRIBUTING.md](.github/CONTRIBUTING.md)。
+具体的贡献方式在 [F.A.Q](https://oi-wiki.org/intro/faq/)。
 
 本项目受 [CTF Wiki](https://ctf-wiki.github.io/ctf-wiki/) 的启发，在编写过程中参考了诸多资料，在此一并致谢。
 
 非常感谢一起完善 **OI Wiki** 的 [小伙伴们](https://github.com/24OI/OI-wiki/graphs/contributors)！
+
+<a href="https://github.com/24OI/OI-wiki/graphs/contributors"><img src="https://opencollective.com/oi-wiki/contributors.svg?width=890" /></a>
 
 特别感谢 [24OI](https://github.com/24OI) 的朋友们的大力支持！
 

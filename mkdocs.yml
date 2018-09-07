@@ -17,10 +17,13 @@ copyright: 'Copyright &copy; 2016 - 2018 OI Wiki Team'
 nav:
   - 简介:
     - Getting Started: index.md
-    - OI 赛制简介: introduction/mode.md
-    - 学习资源: introduction/resources.md
-    - 工具软件: introduction/softwares.md
-    - F.A.Q.: introduction/faq.md
+    - OI 赛制简介: intro/mode.md
+    - 学习资源: intro/resources.md
+    - 工具软件: 
+      - 评测工具: intro/judgers.md
+      - 编辑工具: intro/editors.md
+    - 关于本项目: intro/about.md
+    - F.A.Q.: intro/faq.md
   - 基础部分:
     - 基础部分简介: basic/index.md
     - 枚举: basic/enumerate.md
@@ -37,9 +40,9 @@ nav:
     - BFS: search/bfs.md
     - 双向广搜: search/dbfs.md
     - 启发式搜索: search/heuristic.md
-    - Astar: search/astar.md
-    - IDAstar: search/idastar.md
-    - 迭代深搜: search/iterative.md
+    - A*: search/astar.md
+    - 迭代加深搜索: search/iterative.md
+    - IDA*: search/idastar.md
     - 回溯法: search/backtracking.md
     - Dancing Links: search/dlx.md
   - 动态规划:
@@ -47,7 +50,7 @@ nav:
     - 记忆化搜索: dp/memo.md
     - 背包 DP: dp/backpack.md
     - 区间 DP: dp/interval.md
-    - DAG 上的 dp: dp/dag.md
+    - DAG 上的 DP: dp/dag.md
     - 树形 DP: dp/tree.md
     - 状压 DP: dp/state.md
     - 数位 DP: dp/number.md
@@ -74,6 +77,7 @@ nav:
     - 进制相关: math/base.md
     - 素数: math/prime.md
     - 最大公约数: math/gcd.md
+    - 裴蜀定理: math/bezouts.md
     - 欧拉函数: math/euler.md
     - 筛法: math/sieve.md
     - 莫比乌斯反演: math/mobius.md
@@ -95,7 +99,7 @@ nav:
     - 概率与期望: math/expectation.md
     - 置换群: math/permutation-group.md
     - 高斯消元: math/gauss.md
-    - xor 模线性方程组: math/linear-equations.md
+    - 线性方程: math/linear-equation.md
     - 容斥原理: math/inclusion-exclusion-principle.md
     - 抽屉原理: math/drawer-principle.md
     - 数值积分: math/integral.md
@@ -107,43 +111,48 @@ nav:
     - 高精度: math/bignum.md
     - 杂项: math/misc.md
   - 数据结构:
-    - 数据结构部分简介: data-structure/index.md
-    - STL: data-structure/stl.md
-    - pb_ds: data-structure/pb-ds.md
-    - 基础数据结构:
-      - 链表: data-structure/novice/linked-list.md
-      - 哈希表: data-structure/novice/hash.md
-      - 并查集: data-structure/novice/dsu.md
-      - 堆: data-structure/novice/heap.md
-      - 分块: data-structure/novice/square-root-decomposition.md
-      - 单调栈: data-structure/novice/monotonous-stack.md
-      - 单调队列: data-structure/novice/monotonous-queue.md
-    - 中级数据结构:
-      - 倍增法: data-structure/intermediate/sparse-table.md
-      - 块状链表: data-structure/intermediate/block-list.md
-      - 块状数组: data-structure/intermediate/block-array.md
-      - 树状数组: data-structure/intermediate/bit.md
-      - 线段树: data-structure/intermediate/segment.md
-      - Treap: data-structure/intermediate/treap.md
-      - SBT: data-structure/intermediate/sbt.md
-      - Splay: data-structure/intermediate/splay.md
-      - 替罪羊树: data-structure/intermediate/scapegoat.md
-      - 虚树: data-structure/intermediate/virtual-tree.md
-    - 高级数据结构:
-      - 树套树:
-        - 线段树套线段树: data-structure/advanced/seg-in-seg.md
-        - 平衡树套线段树: data-structure/advanced/seg-in-balanced.md
-        - 线段树套平衡树: data-structure/advanced/balanced-in-seg.md
-      - AVL 树: data-structure/advanced/avl.md
-      - 划分树: data-structure/advanced/dividin.md
-      - K-Dtree: data-structure/advanced/k-dtree.md
-      - 可持久化线段树: data-structure/advanced/persistent-seg.md
-      - 可持久化块状数组: data-structure/advanced/persistent-block-array.md
-      - 可持久化平衡树: data-structure/advanced/persistent-balanced.md
-      - 可持久化字典树: data-structure/advanced/persistent-trie.md
-      - Link Cut Tree: data-structure/advanced/lct.md
-      - Euler Tour Tree: data-structure/advanced/ett.md
-      - 树分块: data-structure/advanced/tree-decompose.md
+    - 数据结构部分简介: ds/index.md
+    - STL:
+      - STL 简介: ds/stl.md
+      - vector: ds/stl/vector.md
+      - priority_queue: ds/stl/priority_queue.md
+      - map: ds/stl/map.md
+    - pb_ds:
+      - pb_ds 简介: ds/pb-ds/index.md
+      - priority_queue: ds/pb-ds/priority-queue.md
+    - 栈: ds/stack.md
+    - 队列: ds/queue.md
+    - 链表: ds/linked-list.md
+    - 哈希表: ds/hash.md
+    - 并查集: ds/dsu.md
+    - 堆: ds/heap.md
+    - 分块: ds/square-root-decomposition.md
+    - 单调栈: ds/monotonous-stack.md
+    - 单调队列: ds/monotonous-queue.md
+    - 倍增法: ds/sparse-table.md
+    - 块状链表: ds/block-list.md
+    - 块状数组: ds/block-array.md
+    - 树状数组: ds/bit.md
+    - 线段树: ds/segment.md
+    - Treap: ds/treap.md
+    - SBT: ds/sbt.md
+    - Splay: ds/splay.md
+    - 替罪羊树: ds/scapegoat.md
+    - 虚树: ds/virtual-tree.md
+    - 树套树:
+      - 线段树套线段树: ds/seg-in-seg.md
+      - 平衡树套线段树: ds/seg-in-balanced.md
+      - 线段树套平衡树: ds/balanced-in-seg.md
+    - AVL 树: ds/avl.md
+    - 划分树: ds/dividin.md
+    - K-Dtree: ds/k-dtree.md
+    - 可持久化线段树: ds/persistent-seg.md
+    - 可持久化块状数组: ds/persistent-block-array.md
+    - 可持久化平衡树: ds/persistent-balanced.md
+    - 可持久化字典树: ds/persistent-trie.md
+    - Link Cut Tree: ds/lct.md
+    - Euler Tour Tree: ds/ett.md
+    - 树分块: ds/tree-decompose.md
   - 图论:
     - 图论部分简介: graph/index.md
     - 图论基础: graph/basic.md
@@ -167,7 +176,6 @@ nav:
     - 最短路: graph/shortest-path.md
     - 最小环: graph/min-circle.md
     - k 短路: graph/kth-path.md
-    - 欧拉图: graph/euler.md
     - 网络流: graph/flow.md
     - 拆点: graph/flow/node.md
     - 最大流: graph/flow/max-flow.md
@@ -202,6 +210,8 @@ nav:
     - 字节顺序: misc/endianness.md
     - 复杂度: misc/complexity.md
     - 读入和输出优化: misc/io.md
+    - 离散化: misc/discrete.md
+    - 树上启发式合并: misc/dsu-on-tree.md
 
 # Theme
 theme:
@@ -210,9 +220,9 @@ theme:
   palette:
     primary: 'white'
     accent: 'red'
-
   include_search_page: false
   search_index_only: true
+  favicon: 'favicon.ico'
 
   logo:
     icon: 'school'
@@ -227,19 +237,22 @@ extra:
   search:
     language: 'jp'
   disqus: 'OI-Wiki'
+  copyright: 'CC BY-SA 4.0 和 SATA'
+  pagetime: 'on'
 
 extra_javascript:
-  - '_static/js/extra.js'
+  - '_static/js/extra.js?v=4'
   - 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
 
 extra_css:
-  - '_static/css/extra.css'
+  - '_static/css/extra.css?v=4'
 
 # Extensions
 markdown_extensions:
   - admonition
   - codehilite:
       guess_lang: false
+      linenums: true
   - def_list
   - footnotes
   - meta
